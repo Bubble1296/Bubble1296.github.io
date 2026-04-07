@@ -1,47 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Bubble12 | Dev Hub</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BubbleSystems | Dev Hub</title>
     <style>
-        body { background-color: #0d1117; color: #c9d1d9; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; padding: 5vw; }
-        .box { 
+        body { 
+            background-color: #0d1117; 
+            color: #c9d1d9; 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; 
+            padding: 5vw; 
+            line-height: 1.6;
+        }
+        .container { max-width: 900px; margin: auto; }
+        
+        /* Product Card Style */
+        .card { 
             border: 2px solid #33ddff; 
             border-radius: 12px; 
-            padding: 25px; 
-            margin-bottom: 25px;
+            padding: 30px; 
+            margin-bottom: 30px;
             background: #161b22;
-            transition: 0.3s;
+            transition: transform 0.2s, border-color 0.2s;
         }
-        .box:hover { border-color: #ffffff; transform: translateY(-5px); }
-        h1, h2 { color: #33ddff; }
+        .card:hover { 
+            border-color: #ffffff; 
+            transform: translateY(-5px); 
+            box-shadow: 0 10px 20px rgba(51, 221, 255, 0.1);
+        }
+
+        h1 { color: #33ddff; font-size: 2.5em; margin-bottom: 10px; }
+        h2 { color: #ffffff; margin-top: 0; }
+        p { color: #8b949e; }
+
         .btn {
             display: inline-block;
             background: #33ddff;
             color: #0d1117;
-            padding: 10px 20px;
-            border-radius: 6px;
+            padding: 12px 24px;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: bold;
-            margin-top: 10px;
+            margin-top: 15px;
+            transition: background 0.2s;
         }
-        .status { color: #8b949e; font-size: 0.85em; text-transform: uppercase; letter-spacing: 1px; }
+        .btn:hover { background: #ffffff; }
+
+        .status-pill {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75em;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+        .stable { background: #238636; color: white; }
+        .beta { background: #d29922; color: black; }
+        .dev { background: #8957e5; color: white; }
+        
+        footer { text-align: center; margin-top: 50px; font-size: 0.8em; color: #484f58; }
     </style>
 </head>
 <body>
-    <h1>Bubble12 Developer Hub</h1>
-    <p>Central terminal for all BubbleScript updates and documentation.</p>
+    <div class="container">
+        <h1>BubbleSystems</h1>
+        <p>Official Developer Hub | Projects by <strong>Bubble12</strong></p>
+        <hr style="border: 0; border-top: 1px solid #30363d; margin: 40px 0;">
 
-    <div class="box">
-        <span class="status">Latest Release</span>
-        <h2>BubbleScript v1.0.0</h2>
-        <p>A Python-based command interpreter with stylized output and custom macro support.</p>
-        <a href="https://github.com/Bubble1296/BubbleScript" class="btn">View Source Code</a>
-    </div>
+        <div class="card">
+            <span class="status-pill stable">Latest Release: v1.3.0</span>
+            <h2>🖥️ BubbleOS</h2>
+            <p>The operating environment program. Version 1.3.0 introduces enhanced windows and UI.</p>
+            <a href="#" class="btn">Install v1.3.0</a>
+        </div>
 
-    <div class="box">
-        <span class="status">In Development</span>
-        <h2>BubbleNexus</h2>
-        <p>Networking and connectivity module for the Bubble ecosystem.</p>
-    </div>
-</body>
-</html>
+        <div class="card">
+            <span class="status-pill stable">v1.0.0</span>
+            <h2>🫧 BubbleScript</h2>
+            <p>A Python-based command interpreter featuring the
